@@ -6,7 +6,7 @@ import random
 
 # Define global scope
 
-guess = ''
+guess = None
 secret_Number = random.randint(1, 100)
 print('I am thinking in a number between 1 and 100')
 
