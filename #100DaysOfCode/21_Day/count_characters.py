@@ -1,3 +1,7 @@
+# Importing external libraries
+
+import pprint
+
 # Defining global values
 
 message = None
@@ -13,7 +17,7 @@ def counting_text(text_Len):
       count.setdefault(character, 0)
       count[character] = count[character] + 1
     
-    print(count)
+    pprint.pprint(count)
 
 # Input values
 
