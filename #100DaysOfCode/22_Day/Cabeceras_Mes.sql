@@ -1,8 +1,10 @@
-CREATE PROCEDURE [dbo].[Calculo_Cabeceras_Del_Mes] (
-	@ANIO INT,
+-- Declaracion de variables globales.
+
+DECLARE @ANIO INT,
 	@MES INT
-)
-AS
+
+SET @ANIO = YYYY
+SET @MES = M
 
 -- Logica para generar las fechas de inicio y comienzo de mes a partir de las variables globales de Anio y Mes.
 
@@ -16,4 +18,6 @@ SET @Fecha_Fin_Mes = DATEFROMPARTS(@ANIO,@MES,@Dia_Fin) -- Arma el ultimo dia de
 
 -- Muestra las fechas 
 
-SELECT @Fecha_Inicio_Mes AS Comienzo_De_Mes, @Fecha_Fin_Mes AS Fin_De_Mes
+SELECT @Fecha_Inicio_Mes AS Comienzo_De_Mes, 
+	   @Fecha_Fin_Mes AS Fin_De_Mes, 
+	   @Dia_Fin AS Cantidad_Dias_Mes
