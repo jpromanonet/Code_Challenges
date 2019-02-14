@@ -25,9 +25,9 @@ command = sys.argv[1].lower()
 	# Save option
 if command == 'save':
     mcb_Shelf[sys.argv[2]] = pyperclip.paste()
-	# List option
+	# List options
 elif command == 'list':
-    pyperclip.copy(", ".join(mcb_Shelf.keys()))
+    print("\n".join(mcb_Shelf.keys()))
 	# Delete one item option
 elif command == 'delete':
     del mcb_Shelf[sys.argv[2]]
