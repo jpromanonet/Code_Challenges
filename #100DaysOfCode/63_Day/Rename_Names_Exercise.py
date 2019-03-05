@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-cd#! python3
-=======
 #! python3
->>>>>>> 41d1d696daec11931efe29ea62f05f704c64b02f
 
 # Rename_Names_Exercise.py is the first exercise of chapter nine from the book 'Automating the boring stuff with python'
 
@@ -46,12 +42,8 @@ for amerFileName in os.listdir('.'):
     monthPart  = mo.group(2)
     dayPart    = mo.group(4)
     yearPart   = mo.group(6)
-<<<<<<< HEAD
     afterPart  = mo.group(8)
 
     # Form the european style filename.
 
     euroFileName = beforePart + dayPart + '-' + monthPart + '-' + yearPart + afterPart
-=======
-    afterPart  = mo.group(8)
->>>>>>> 41d1d696daec11931efe29ea62f05f704c64b02f
