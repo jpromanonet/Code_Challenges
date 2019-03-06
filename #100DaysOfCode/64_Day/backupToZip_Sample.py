@@ -7,20 +7,30 @@
 # Importing libraries and frameworks
 
 import os
-import zipfile
 import datetime
 import shutil
 
 # Defining global variables
 
-zipFileName = None 
+zipFileName = None
 folder = None
+workingDir = None
 
 # User parameters
+
+print('Stablish your working directory')
+workingDir = input()
 
 print('Input the directory to zip')
 folder = input()
 
 # Program logic
 
-shutil.make_archive('NewZipFile', 'zip', str(folder))
+    # Defining the new ZIP filename
+zipFileName = datetime.datetime.now().strftime("%Y-%m-%d_%H%M%S")
+
+    # Establishing the working directory
+os.chdir(str(workingDir))
+
+    # Creating the ZIP file
+shutil.make_archive(str(zipFileName), 'zip', str(folder))
