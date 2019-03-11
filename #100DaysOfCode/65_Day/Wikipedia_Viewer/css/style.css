@@ -1,0 +1,61 @@
+body{
+  background-image: url('http://www.salttechno.com/wp-content/uploads/2015/08/web-designer-pune-background.jpg');
+
+  color:rgb(0,0,0);
+    background-repeat: repeat;
+    background-attachment: fixed; 
+}
+.heading{
+  border-radius:25px;
+  margin:1%;
+  padding:1%;
+  display:inline-block;
+  font-family: 'Ubuntu', Arial;
+}
+.heading img{
+  background-color:#0099cc;
+  border-radius:25px;
+  display:inline-block;
+  font-family: 'Ubuntu', Arial;
+  width:50%;
+}
+
+a { 
+  color: inherit; 
+  background-color: red;
+}
+
+h2{
+  color:black;
+  padding-left:1%;
+  padding-top:1%;
+}
+
+p{
+  padding-bottom: 1%;
+  padding-left:1%;
+  font-size:25px;
+  background-color: #008080;
+  border-radius: 10px;
+}
+div{
+  border-radius:25px;
+}
+
+img{
+margin-bottom: 1%;
+}
+
+button{
+margin:1%;
+}
+
+#output{
+  margin-top:1%;
+  border-radius:25px;
+  font-family: 'Ubuntu', Arial;
+}
+
+h2{
+  font-family: 'Ubuntu', Arial;
+}
