@@ -50,3 +50,20 @@ except:
 
 # End Exercise 3
 
+# Exercise 4
+
+market_2nd = {'ns': 'green', 'ew': 'red'}
+mission_16th = {'ns': 'red', 'ew': 'green'}
+
+def switchLights(stopLight):
+    for key in stopLight.keys():
+        if stoplight[key] == 'green':
+            stoplight[key] = 'yellow'
+        elif stopLight[key] == 'yellow':
+            stopLight[key] = 'red'
+        elif stopLight == 'red':
+            stopLight[key] = 'green'
+
+switchLights(market_2nd)
+
+# End exercise 4
