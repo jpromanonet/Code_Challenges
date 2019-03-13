@@ -28,6 +28,7 @@ option = None # Conditional choose to keep writing or not
 
 print('Please introduce the working directory: ')
 workingDir = input()
+os.chdir(str(workingDir))
 print(' ')
 
 # Program Logic
