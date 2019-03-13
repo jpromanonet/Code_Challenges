@@ -76,8 +76,15 @@ htmlStr = '''
 htmlStrEndTags = '''        </div>
                         </div>
                     </main>
-                    <footer class="bg-info">
-                    </footer>
+                    <footer class="bg-info" style="position: fixed; bottom: 0; left: 0; width: 100%;">
+						<center>
+							<b>MinimalLoggerPy</b> by <a href="http://www.jpromano.net" target="_blank">Juan P. Romano</a> | GitHub Repo  
+							</br>
+							<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
+								<img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+							</a>
+						</center>
+					</footer>
                 </body>
             </html>'''
 
