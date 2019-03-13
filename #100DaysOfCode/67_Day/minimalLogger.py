@@ -22,7 +22,6 @@ randomCode = 0 # It's the unique ID number of every file.
 fullFileName = None # It's the sum of logFileName and randomCode
 workingDir = None # It's the dir where the user is gonna save the log file.
 keepLogging = True # Value = False stop logging
-option = None # Conditional choose to keep writing or not
 
 # User parameters
 
