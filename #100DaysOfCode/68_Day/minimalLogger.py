@@ -150,6 +150,11 @@ totalLogTime = endLog - beginLog # How much time spend writing
 stats = '''                 </div>
                         </div>
                     </main>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    </br>
                     <footer class="bg-info" style="position: fixed; bottom: 0; left: 0; width: 100%;"><div class="container-fluid" style="background: #FF8C00;>
                             <div class="row">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-sx-12">
