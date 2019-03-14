@@ -12,6 +12,8 @@ import datetime
 
 # Defining global variables
 
+    ## User parameters and doc construction variables
+
 userInputLog = None # Gonna be the user input to concatenate with the htmlStr
 fullInputLog = None # It takes the userInputLog and adds bootstrap style
 htmlStr = None # Gonna be the HTML body without end tags
@@ -25,6 +27,16 @@ keepLogging = True # Value = False stop logging
 dirName = None # Directory with the date as name
 fullWorkingPath = None # It's the sum of workingDir and dirName
 
+    ## Stats Variables
+
+stats = None # Contains the string with the HTML tags
+startLogTime = None # It's the time the user start loggin
+finishLogTime = None # It's the time the user finish loggin
+beginLog = 0 # The same as startLogTime but as datetime
+endLog = 0 # The same as startLogTime but as datetime
+totalLogTime = None # It's the time the user spend writing
+totalLogs = 0 # How many logs in this file
+
 # User parameters
 
 print('Please introduce the working directory: ')
@@ -32,6 +44,10 @@ workingDir = input()
 print(' ')
 
 # Program Logic
+
+    ## Setting the stats values before start the writing
+startLogTime = datetime.datetime.now().strftime("%H:%M:%S")
+beginLog = datetime.datetime.now()
 
 	## Create dir if not exist or use it to save files for the day
 dirName = datetime.datetime.now().strftime("%Y-%m-%d")
@@ -82,11 +98,7 @@ htmlStr = '''
 
     ## Creating the HTML body structure | End Tags to close the document
 
-htmlStrEndTags = '''        </div>
-                        </div>
-                    </main>
-                    <footer class="bg-info" style="position: fixed; bottom: 0; left: 0; width: 100%;">
-						<center>
+htmlStrEndTags = '''    <center>
 							<b>MinimalLoggerPy</b> by <a href="http://www.jpromano.net" target="_blank">Juan P. Romano</a> | GitHub Repo  
 							</br>
 							<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
@@ -115,6 +127,8 @@ while keepLogging == True:
                             <div class="panel-heading">Log time: <b>'''+logDateTime+'''</b></div>'''+userInputLog+'''</div>
                     </div>'''
     htmlFile.write(str(fullInputLog))
+        ### Counting logs inputs
+    totalLogs += 1
         ### Ask if the user wants to keep adding logs
     print(' ')
     print('Do you want to keep writing? y/n')
@@ -126,6 +140,30 @@ while keepLogging == True:
     else:
         break
 
+    ## Setting the stats values after finish the writing
+finishLogTime = datetime.datetime.now().strftime("%H:%M:%S")
+endLog = datetime.datetime.now()
+totalLogTime = endLog - beginLog # How much time spend writing
+
+    ## Creating the HTML tags for the Stats line
+
+stats = '''                 </div>
+                        </div>
+                    </main>
+                    <footer class="bg-info" style="position: fixed; bottom: 0; left: 0; width: 100%;"><div class="container-fluid" style="background: #FF8C00;>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-sx-12">
+                                    <div align-text="left">
+                                        <b class="bg-danger">Start time:</b><b> '''+str(startLogTime)+''' Hs </b>
+                                        <b class="bg-danger">Finish time:</b><b> '''+str(finishLogTime)+''' Hs </b>
+                                        <b class="bg-danger">TOTAL LOG TIME:</b><b> '''+str(totalLogTime)+''' Hs </b>
+                                        <b style="background: #008080;">    TOTAL ENTERS IN FILE:<font color="white">   '''+str(totalLogs)+'''  </font></b>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>'''
+
     ## Here ends the HTML document
+htmlFile.write(str(stats))
 htmlFile.write(str(htmlStrEndTags))
 htmlFile.close()
