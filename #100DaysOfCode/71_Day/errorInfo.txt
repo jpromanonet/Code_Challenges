@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "errorExample.py", line 3, in <module>
+    raise Exception('This is a Jedi Super Master')
+Exception: This is a Jedi Super Master
