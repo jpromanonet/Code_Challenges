@@ -39,16 +39,32 @@ finalHtmlFile = ''
 
 # Declaring functions
 
+    ## Movies Functions
+
 def addMovie(title, releaseDate, sagaNumber, pendingToWatch):
     moviesFile = shelve.open('moviesDB')
     movieTitle = title
     moviesFile[movieTitle] = [title, releaseDate, sagaNumber, pendingToWatch]
     moviesFile.close()
 
+def deleteMovie(title):
+    movieTitle = title
+    moviesFile = shelve.open('moviesDB')
+    del moviesFile[movieTitle]
+    moviesFile.close()
+
+    ## Series Functions
+
 def addSeries(title, seasons, releaseDate, chapters, pendingToWatch):
     seriesFile = shelve.open('seriesDB')
     serieTitle = title
     seriesFile[serieTitle] = [title, seasons, releaseDate, chapters, pendingToWatch]
+    seriesFile.close()
+
+def deleteSeries(title):
+    serieTitle = title
+    seriesFile = shelve.open('seriesDB')
+    del seriesFile[serieTitle]
     seriesFile.close()
 
 # Program logic
