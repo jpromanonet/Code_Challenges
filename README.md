@@ -2,7 +2,7 @@
 
 Here, i'm going to upload the code that i will be doing for some different code challenges, like:
 
-1. #100DaysOfCode
+1. #100DaysOfCode :heavy_check_mark:
 2. #180DaysOfCode
 3. #180WebsitesIn180Days
 4. #1yearOfCode
